@@ -3,8 +3,8 @@ import { HeaderData } from "../../../data/dashboard/HeaderData";
 
 export default function DashboardHeader() {
   return (
-    <div className="flex justify-between items-center">
-      <div className="flex w-2/4">
+    <div className="flex flex-wrap lg:flex-nowrap justify-between items-center">
+      <div className="flex">
         <img
           className="w-[57px] h-[57px]"
           src="https://i.ibb.co/0rfJxxk/grammarly-2.png"
@@ -15,9 +15,13 @@ export default function DashboardHeader() {
           <p className="text-regular text-[#282A2C]">reebok.abfrl.in</p>
         </div>
       </div>
-      <div className="flex items-center justify-between w-2/4">
+      <div className="flex  flex-wrap lg:flex-nowrap items-center justify-between w-2/4">
         {HeaderData.map((item, index) => (
-          <div className="border-r-[1px] border-[#E8E4F5] px-[16px]">
+          <div
+            className={`${
+              index == 2 ? "" : "border-r-[1px] border-[#E8E4F5] px-[16px]"
+            } `}
+          >
             <p className="text-regular text-[#6C6D70] text-[12px]">
               {item.name}
             </p>

@@ -6,6 +6,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-family: var(--regular);
 }
 
 :root {
@@ -15,14 +16,21 @@ body {
 }
 
 .text-regular {
-  font-family: var(--regular);
+  font-family: var(--regular) !important;
   font-weight: 400;
 }
 .text-bold {
-  font-family: var(--bold);
+  font-family: var(--bold) !important;
   font-weight: 700;
 }
 .text-medium {
-  font-family: var(--medium);
+  font-family: var(--medium) !important;
   font-weight: 500;
+}
+
+.dashboard-question {
+  color: #6c6d70;
+  font-size: 14px;
+  font-family: var(--regular) !important;
+  font-weight: 400;
 }

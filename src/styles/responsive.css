@@ -34,16 +34,3 @@
     max-width: 540px;
   }
 }
-
-@media (min-width: 768px) {
-  .status_modal_view {
-    width: 70%;
-    height: auto !important;
-  }
-}
-@media (min-width: 1200px) {
-  .status_modal_view {
-    width: 60% !important;
-    height: auto !important;
-  }
-}
