@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { BiChevronDown } from "react-icons/bi";
 import AdStats from "./AdStats";
 import PieChart from "./PieChart";
+
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 type AdType = {
   id: number;
@@ -10,6 +13,22 @@ type AdType = {
 };
 
 export default function AdDetail({ selectedAd }: { selectedAd: AdType }) {
+  const ExampleCustomInput = ({ value, onClick, title }: any) => (
+    <div className="flex items-center mr-[10px]">
+      <p className="text-[#6C6D70] text-regular text-[12px] mr-[6px]">From</p>
+      <div
+        className="border border-[#E8E4F5] w-[75px] h-[42px] rounded-[12px] justify-center flex items-center cursor-pointer"
+        onClick={onClick}
+      >
+        <p className="text-[#3C3C3C] text-[14px] text-medium">From</p>
+        <BiChevronDown className="text-[#8E00DB] text-[20px] ml-[6px]" />
+      </div>
+    </div>
+  );
+
+  const [formDate, setFormDate] = useState();
+  const [endDate, setEndDate] = useState();
+
   return (
     <div className="px-[28px]">
       <div className="lg:grid lg:grid-cols-2 ">
@@ -67,24 +86,17 @@ export default function AdDetail({ selectedAd }: { selectedAd: AdType }) {
             Performance Stats
           </h1>
           <div className="flex">
-            <div className="flex items-center mr-[10px]">
-              <p className="text-[#6C6D70] text-regular text-[12px] mr-[6px]">
-                From
-              </p>
-              <div className="border border-[#E8E4F5] w-[75px] h-[42px] rounded-[12px] justify-center flex items-center cursor-pointer">
-                <p className="text-[#3C3C3C] text-[14px] text-medium">Date</p>
-                <BiChevronDown className="text-[#8E00DB] text-[20px] ml-[6px]" />
-              </div>
-            </div>
-            <div className="flex items-center">
-              <p className="text-[#6C6D70] text-regular text-[12px] mr-[6px]">
-                End
-              </p>
-              <div className="border border-[#E8E4F5] w-[75px] h-[42px] rounded-[12px] justify-center flex items-center cursor-pointer">
-                <p className="text-[#3C3C3C] text-[14px] text-medium">Date</p>
-                <BiChevronDown className="text-[#8E00DB] text-[20px] ml-[6px]" />
-              </div>
-            </div>
+            <DatePicker
+              selected={formDate}
+              onChange={(date: any) => setFormDate(date)}
+              customInput={<ExampleCustomInput title="Start" />}
+            />
+
+            <DatePicker
+              selected={endDate}
+              onChange={(date: any) => setEndDate(date)}
+              customInput={<ExampleCustomInput title="End" />}
+            />
           </div>
         </div>
       </div>
