@@ -15,11 +15,13 @@ export default function DashboardHeader() {
           <p className="text-regular text-[#282A2C]">reebok.abfrl.in</p>
         </div>
       </div>
-      <div className="flex  flex-wrap lg:flex-nowrap items-center justify-between w-2/4">
+      <div className="lg:flex  flex-wrap lg:flex-nowrap items-center justify-between 2xl:w-2/4">
         {HeaderData.map((item, index) => (
           <div
             className={`${
-              index == 2 ? "" : "border-r-[1px] border-[#E8E4F5] px-[16px]"
+              index == 2
+                ? ""
+                : "lg:border-r-[1px] lg:border-[#E8E4F5] lg:px-[16px] mt-[8px] lg:mt-0"
             } `}
           >
             <p className="text-regular text-[#6C6D70] text-[12px]">

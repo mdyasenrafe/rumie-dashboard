@@ -30,18 +30,18 @@ export default function AdDetail({ selectedAd }: { selectedAd: AdType }) {
   const [endDate, setEndDate] = useState();
 
   return (
-    <div className="px-[28px]">
+    <div className="px-[16px] 2xl:px-[28px]">
       <div className="lg:grid lg:grid-cols-2 ">
         <div className="w-full">
           <img
             src={selectedAd.image}
             alt={selectedAd.title}
-            className="lg:w-[90%] lg:h-auto"
+            className=" w-full lg:w-[90%] lg:h-auto"
           />
         </div>
         <div>
           <div className="mb-[14px]">
-            <p className="dashboard-question"> Ad Title</p>
+            <p className="dashboard-question mt-[16px] lg:mt-0"> Ad Title</p>
             <h1 className="text-medium text-[20px] text-[#282A2C]">
               {selectedAd.title}
             </h1>
@@ -81,8 +81,8 @@ export default function AdDetail({ selectedAd }: { selectedAd: AdType }) {
       </div>
       <hr className="border border-[#E8E4F5] mt-[30px] mb-[40px]" />
       <div>
-        <div className="flex items-center justify-between">
-          <h1 className="text-[#3E4245] text-medium text-[20px]">
+        <div className="lg:flex items-center justify-between ">
+          <h1 className="text-[#3E4245] text-medium text-[20px] mb-[16px] lg:mb-[0px]">
             Performance Stats
           </h1>
           <div className="flex">

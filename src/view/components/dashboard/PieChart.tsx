@@ -44,7 +44,7 @@ export default function PieChart() {
           Gender Ratio
         </h1>
 
-        <div className="lg:w-[70%] 2xl:w-[60%] flex mt-[20px] items-center mb-[16px]">
+        <div className="w-[70%] 2xl:w-[60%] flex mt-[20px] items-center mb-[16px]">
           <Doughnut data={genderData} />
           <div className="ml-[10px]">
             {optionsData.map((item, index) => (

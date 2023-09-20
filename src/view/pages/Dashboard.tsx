@@ -16,7 +16,7 @@ export default function Dashboard() {
   return (
     <Layout>
       <div className="bg-[#F4F6F9] py-[90px]">
-        <div className="dashbaord-shadow rounded-[16px] lg:mx-[40px] xl:mx-[60px]">
+        <div className="dashbaord-shadow rounded-[16px]  xl:mx-[30px] 2xl:mx-[60px]">
           <div className="lg:grid  lg:grid-cols-3">
             <div className="p-[30px] bg-white rounded-[16px] mx-6 lg:col-span-2">
               <DashboardHeader />
@@ -25,7 +25,7 @@ export default function Dashboard() {
                 {AdData.map((ad, index) => (
                   <div
                     key={index}
-                    className="pr-[29px] mb-[16px] cursor-pointer"
+                    className="lg:pr-[29px] mb-[16px] cursor-pointer"
                     onClick={() => setSelectedAd(ad)}
                   >
                     <img
@@ -37,7 +37,7 @@ export default function Dashboard() {
                 ))}
               </div>
             </div>
-            <div className="py-[30px] rounded-[16px] bg-white">
+            <div className="py-[30px] rounded-[16px] bg-white mt-[24px] mx-6 lg:mx-0">
               {selectedAd ? (
                 <AdDetail selectedAd={selectedAd} />
               ) : (
