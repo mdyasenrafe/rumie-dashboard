@@ -1,4 +1,7 @@
 import React from "react";
+import { BiChevronDown } from "react-icons/bi";
+import AdStats from "./AdStats";
+import PieChart from "./PieChart";
 
 type AdType = {
   id: number;
@@ -18,25 +21,25 @@ export default function AdDetail({ selectedAd }: { selectedAd: AdType }) {
           />
         </div>
         <div>
-          <div className="mb-[20px]">
+          <div className="mb-[14px]">
             <p className="dashboard-question"> Ad Title</p>
             <h1 className="text-medium text-[20px] text-[#282A2C]">
               {selectedAd.title}
             </h1>
           </div>
-          <div className="mb-[20px]">
+          <div className="mb-[14px]">
             <p className="dashboard-question">External Link</p>
-            <h1 className="text-medium text-[16px] text-[#282A2C]">
+            <h1 className="text-medium text-[15px] text-[#282A2C]">
               www.rumieapp.com
             </h1>
           </div>
-          <div className="mb-[20px]">
+          <div className="mb-[14px]">
             <p className="dashboard-question">Visible to</p>
-            <h1 className="text-medium text-[16px] text-[#282A2C]">
+            <h1 className="text-medium text-[15px] text-[#282A2C]">
               Texas University, Houston University, UH Energy
             </h1>
           </div>
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center flex-wrap">
             <div className="flex justify-between items-center h-[50px] border border-[#E8E4F5] rounded-[8px] p-[8px] w-[158px]">
               <div>
                 <p className="dashboard-question text-[12px]">Live Since</p>
@@ -45,18 +48,48 @@ export default function AdDetail({ selectedAd }: { selectedAd: AdType }) {
                 </h6>
               </div>
               <div className="bg-[#E8E4F5] w-[44px] ml-[16px] h-[45px] text-center rounded-[8px]">
-                <p className="text-[15px] text-bold">16 Days</p>
+                <p className="text-[13px] text-bold">16 Days</p>
               </div>
             </div>
-            <div className="border border-[#E8E4F5]  rounded-[8px] p-[8px] h-[50px] flex justify-center items-center">
+            <div className="border border-[#E8E4F5]  rounded-[8px] p-[8px] h-[50px] flex justify-center items-center mt-[8px]">
               <div>
-                <p className="text-[12px]">Monthly Budget</p>
-                <p className="text-[16px]">$100</p>
+                <p className="text-[12px] text-[#6C6D70]">Monthly Budget</p>
+                <p className="text-[14px] text-regular text-[#282A2C]">$100</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <hr className="border border-[#E8E4F5] mt-[30px] mb-[40px]" />
+      <div>
+        <div className="flex items-center justify-between">
+          <h1 className="text-[#3E4245] text-medium text-[20px]">
+            Performance Stats
+          </h1>
+          <div className="flex">
+            <div className="flex items-center mr-[10px]">
+              <p className="text-[#6C6D70] text-regular text-[12px] mr-[6px]">
+                From
+              </p>
+              <div className="border border-[#E8E4F5] w-[75px] h-[42px] rounded-[12px] justify-center flex items-center cursor-pointer">
+                <p className="text-[#3C3C3C] text-[14px] text-medium">Date</p>
+                <BiChevronDown className="text-[#8E00DB] text-[20px] ml-[6px]" />
+              </div>
+            </div>
+            <div className="flex items-center">
+              <p className="text-[#6C6D70] text-regular text-[12px] mr-[6px]">
+                End
+              </p>
+              <div className="border border-[#E8E4F5] w-[75px] h-[42px] rounded-[12px] justify-center flex items-center cursor-pointer">
+                <p className="text-[#3C3C3C] text-[14px] text-medium">Date</p>
+                <BiChevronDown className="text-[#8E00DB] text-[20px] ml-[6px]" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <AdStats />
+      <PieChart />
     </div>
   );
 }

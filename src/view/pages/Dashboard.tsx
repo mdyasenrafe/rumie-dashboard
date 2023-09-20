@@ -22,9 +22,9 @@ export default function Dashboard() {
               <DashboardHeader />
               <hr className="mt-[16px] mb-[26px] border-r border-r-[#E8E4F5]" />
               <div className="grid sm:grid-cols-2 lg:grid-cols-3">
-                {AdData.map((ad) => (
+                {AdData.map((ad, index) => (
                   <div
-                    key={ad.id}
+                    key={index}
                     className="pr-[29px] mb-[16px] cursor-pointer"
                     onClick={() => setSelectedAd(ad)}
                   >
