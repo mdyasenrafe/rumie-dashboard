@@ -82,7 +82,7 @@ export default function AdDetail({ selectedAd }: { selectedAd: AdType }) {
       <hr className="border border-[#E8E4F5] mt-[30px] mb-[40px]" />
       <div>
         <div className="lg:flex items-center justify-between ">
-          <h1 className="text-[#3E4245] text-medium text-[20px] mb-[16px] lg:mb-[0px]">
+          <h1 className="text-[#3E4245] text-medium text-[14px] 2xl:text-[20px] mb-[16px] lg:mb-[0px]">
             Performance Stats
           </h1>
           <div className="flex">
