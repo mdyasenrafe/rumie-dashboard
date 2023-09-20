@@ -1,0 +1,28 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --regular: "NoirProRegular";
+  --bold: "NoirProBold";
+  --medium: "NoirProMedium";
+}
+
+.text-regular {
+  font-family: var(--regular);
+  font-weight: 400;
+}
+.text-bold {
+  font-family: var(--bold);
+  font-weight: 700;
+}
+.text-medium {
+  font-family: var(--medium);
+  font-weight: 500;
+}

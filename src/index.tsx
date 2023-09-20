@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import "../src/styles/responsive.css";
 import "../src/styles/common.css";
 import "../src/styles/styles.css";
+import "../src/styles/font.css";
+
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
