@@ -28,11 +28,11 @@ export default function Dashboard() {
             <div className="p-[30px] bg-white rounded-[16px] ms-6 lg:ms-0 mr-6 lg:col-span-7 ">
               <DashboardHeader />
               <hr className="mt-[16px] mb-[26px] border-r border-r-[#E8E4F5]" />
-              <div className="hidden lg:grid sm:grid-cols-2 lg:grid-cols-3">
+              <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3">
                 {AdData.map((ad, index) => (
                   <div
                     key={index}
-                    className="lg:pr-[16px] 2xl:pr-[29px] mb-[16px] cursor-pointer"
+                    className="md:pr-[16px] 2xl:pr-[29px] mb-[16px] cursor-pointer"
                     onClick={() => setSelectedAd(ad)}
                   >
                     <img
@@ -43,7 +43,7 @@ export default function Dashboard() {
                   </div>
                 ))}
               </div>
-              <div className="lg:hidden ">
+              <div className="md:hidden ">
                 <Swiper>
                   {AdData.map((ad, index) => (
                     <SwiperSlide key={index}>

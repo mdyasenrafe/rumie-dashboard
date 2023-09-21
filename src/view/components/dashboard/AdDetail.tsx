@@ -40,19 +40,19 @@ export default function AdDetail({ selectedAd }: { selectedAd: AdType }) {
           />
         </div>
         <div>
-          <div className="mb-[14px]">
+          <div className="mb-[14px] xl:mb-[18px]">
             <p className="dashboard-question mt-[16px] lg:mt-0"> Ad Title</p>
             <h1 className="text-medium text-[20px] lg:text-[18px] 2xl:text-[20px] text-[#282A2C]">
               {selectedAd.title}
             </h1>
           </div>
-          <div className="mb-[14px]">
+          <div className="mb-[14px] xl:mb-[18px]">
             <p className="dashboard-question">External Link</p>
             <h1 className="text-medium text-[15px] text-[#282A2C]">
               www.rumieapp.com
             </h1>
           </div>
-          <div className="mb-[14px]">
+          <div className="mb-[14px] xl:mb-[18px]">
             <p className="dashboard-question">Visible to</p>
             <h1 className="text-medium text-[15px] text-[#282A2C]">
               Texas University, Houston University, UH Energy
