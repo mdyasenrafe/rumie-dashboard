@@ -18,7 +18,7 @@ export default function Dashboard() {
       <div className="bg-[#F4F6F9] py-[90px]">
         <div className="dashbaord-shadow rounded-[16px]  xl:mx-[30px] 2xl:mx-[60px]">
           <div className="lg:grid  lg:grid-cols-12">
-            <div className="p-[30px] bg-white rounded-[16px] mr-6 lg:col-span-7 ">
+            <div className="p-[30px] bg-white rounded-[16px] ms-6 lg:ms-0 mr-6 lg:col-span-7 ">
               <DashboardHeader />
               <hr className="mt-[16px] mb-[26px] border-r border-r-[#E8E4F5]" />
               <div className="grid sm:grid-cols-2 lg:grid-cols-3">
