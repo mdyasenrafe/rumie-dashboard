@@ -38,13 +38,13 @@ export default function PieChart() {
     ],
   };
   return (
-    <div className="mt-[50px] 2xl:grid lg:grid-cols-2">
+    <div className="mt-[50px] lg:grid lg:grid-cols-2">
       <div>
         <h1 className="text-[20px] text-medium text-[#3E4245] mb-[10px]">
           Gender Ratio
         </h1>
 
-        <div className="w-[70%] 2xl:w-[60%] flex mt-[20px] items-center mb-[16px]">
+        <div className="w-[60%] 2xl:w-[60%] flex mt-[20px] items-center mb-[16px]">
           <Doughnut data={genderData} />
           <div className="ml-[10px]">
             {optionsData.map((item, index) => (

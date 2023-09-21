@@ -17,7 +17,7 @@ export default function AdStats() {
               : "bg-[#D3F3E2]"
           } p-[16px] rounded-[12px] mr-[12px] w-[100%]`}
         >
-          <p className="text-[#6C6D70] text-[12px] text-regular">
+          <p className=" text-[#6C6D70] lg:text-[9px] 2xl:text-[12px] text-regular">
             {item.title}
           </p>
           <p className="text-[#282A2C] text-medium text-[16px]">{item.value}</p>

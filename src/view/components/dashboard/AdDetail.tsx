@@ -31,18 +31,18 @@ export default function AdDetail({ selectedAd }: { selectedAd: AdType }) {
 
   return (
     <div className="px-[16px] 2xl:px-[28px]">
-      <div className="lg:grid lg:grid-cols-2 ">
-        <div className="w-full">
+      <div className="grid lg:flex 2xl:grid 2xl:grid-cols-2 lg:gap-[16px] 2xl:gap-0">
+        <div className="w-full lg:w-[50%] 2xl:w-full">
           <img
             src={selectedAd.image}
             alt={selectedAd.title}
-            className=" w-full lg:w-[90%] lg:h-auto"
+            className=" w-full 2xl:w-[90%] 2xl:h-auto"
           />
         </div>
         <div>
           <div className="mb-[14px]">
             <p className="dashboard-question mt-[16px] lg:mt-0"> Ad Title</p>
-            <h1 className="text-medium text-[20px] text-[#282A2C]">
+            <h1 className="text-medium text-[20px] lg:text-[18px] 2xl:text-[20px] text-[#282A2C]">
               {selectedAd.title}
             </h1>
           </div>
@@ -70,7 +70,7 @@ export default function AdDetail({ selectedAd }: { selectedAd: AdType }) {
                 <p className="text-[13px] text-bold">16 Days</p>
               </div>
             </div>
-            <div className="border border-[#E8E4F5]  rounded-[8px] p-[8px] h-[50px] flex justify-center items-center mt-[8px]">
+            <div className="border border-[#E8E4F5]  rounded-[8px] p-[8px] h-[50px] flex justify-center items-center">
               <div>
                 <p className="text-[12px] text-[#6C6D70]">Monthly Budget</p>
                 <p className="text-[14px] text-regular text-[#282A2C]">$100</p>
