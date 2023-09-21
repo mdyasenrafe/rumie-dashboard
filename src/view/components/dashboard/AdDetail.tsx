@@ -31,8 +31,8 @@ export default function AdDetail({ selectedAd }: { selectedAd: AdType }) {
 
   return (
     <div className="px-[16px] 2xl:px-[28px]">
-      <div className="grid lg:flex 2xl:grid 2xl:grid-cols-2 lg:gap-[16px] 2xl:gap-0">
-        <div className="w-full lg:w-[50%] 2xl:w-full">
+      <div className="grid md:flex 2xl:grid 2xl:grid-cols-2 md:gap-[16px] 2xl:gap-0">
+        <div className="w-full md:w-[50%] 2xl:w-full">
           <img
             src={selectedAd.image}
             alt={selectedAd.title}
