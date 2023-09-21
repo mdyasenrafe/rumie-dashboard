@@ -7,7 +7,15 @@ export default function AdStats() {
       {AdStatsData.map((item, index) => (
         <div
           key={index}
-          className={`bg-[${item.bgColor}] p-[16px] rounded-[12px] mr-[12px] w-[100%]`}
+          className={`${
+            item.id == 1
+              ? "bg-[#D9CAFF]"
+              : item.id == 2
+              ? "bg-[#B5E9F9]"
+              : item.id == 3
+              ? "bg-[#FFE3C9]"
+              : "bg-[#D3F3E2]"
+          } p-[16px] rounded-[12px] mr-[12px] w-[100%]`}
         >
           <p className="text-[#6C6D70] text-[12px] text-regular">
             {item.title}
