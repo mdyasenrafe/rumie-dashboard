@@ -70,10 +70,12 @@ export default function AdDetail({ selectedAd }: { selectedAd: AdType }) {
                 <p className="text-[13px] text-bold">16 Days</p>
               </div>
             </div>
-            <div className="border border-[#E8E4F5]  rounded-[8px] p-[8px] h-[50px] flex justify-center items-center">
+            <div className="border border-[#E8E4F5]  rounded-[8px] p-[14px] lg:p-[8px] h-[50px] flex justify-center items-center">
               <div>
-                <p className="text-[12px] text-[#6C6D70]">Monthly Budget</p>
-                <p className="text-[14px] text-regular text-[#282A2C]">$100</p>
+                <p className="text-[14px] lg:text-[12px] text-[#6C6D70]">
+                  Monthly Budget
+                </p>
+                <p className="text-[16px] text-regular text-[#282A2C]">$100</p>
               </div>
             </div>
           </div>

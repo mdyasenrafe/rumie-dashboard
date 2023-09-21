@@ -4,6 +4,13 @@ import Layout from "../components/layout/Layout";
 import DashboardHeader from "../components/dashboard/DashboardHeader";
 import { AdData } from "../../data/dashboard/AdData";
 import AdDetail from "../components/dashboard/AdDetail";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+// import Swiper and modules styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 type AdType = {
   id: number;
@@ -21,7 +28,7 @@ export default function Dashboard() {
             <div className="p-[30px] bg-white rounded-[16px] ms-6 lg:ms-0 mr-6 lg:col-span-7 ">
               <DashboardHeader />
               <hr className="mt-[16px] mb-[26px] border-r border-r-[#E8E4F5]" />
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3">
+              <div className="hidden lg:grid sm:grid-cols-2 lg:grid-cols-3">
                 {AdData.map((ad, index) => (
                   <div
                     key={index}
@@ -35,6 +42,24 @@ export default function Dashboard() {
                     />
                   </div>
                 ))}
+              </div>
+              <div className="lg:hidden ">
+                <Swiper>
+                  {AdData.map((ad, index) => (
+                    <SwiperSlide key={index}>
+                      <div
+                        className="lg:pr-[16px] 2xl:pr-[29px] mb-[16px] cursor-pointer"
+                        onClick={() => setSelectedAd(ad)}
+                      >
+                        <img
+                          src={ad.image}
+                          alt={ad.title}
+                          className="w-full rounded-[16px] h-[100%]"
+                        />
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
               </div>
             </div>
             <div className="py-[30px] rounded-[16px] bg-white mt-[24px] md:mt-0 mx-6 lg:mx-0 lg:col-span-5 ">

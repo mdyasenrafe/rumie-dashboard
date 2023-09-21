@@ -3,7 +3,7 @@ import { HeaderData } from "../../../data/dashboard/HeaderData";
 
 export default function DashboardHeader() {
   return (
-    <div className="flex flex-wrap lg:flex-nowrap justify-between items-center">
+    <div className="lg:flex lg:flex-nowrap justify-between items-center">
       <div className="flex">
         <img
           className="w-[57px] h-[57px]"
